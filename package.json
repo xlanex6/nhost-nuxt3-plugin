@@ -1,6 +1,12 @@
 {
   "name": "@nuxtjs/nhost",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "A simple wrapper around nhost-js to enable usage and integration within Nuxt.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximilian-schwarz/nhost-nuxt3-plugin.git"
+  },
+  "author": "Maximilian Schwarz <maximilian@unique-web.de>",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -34,5 +40,17 @@
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "eslint": "^8.26.0",
     "nuxt": "^3.0.0-rc.13"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "nhost",
+    "nuxt",
+    "module"
+  ],
+  "bugs": {
+    "url": "https://github.com/maximilian-schwarz/nhost-nuxt3-plugin/issues"
+  },
+  "homepage": "https://github.com/maximilian-schwarz/nhost-nuxt3-plugin#readme"
 }
