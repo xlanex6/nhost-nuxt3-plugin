@@ -44,7 +44,7 @@ NUXT_PUBLIC_NHOST_REGION=""
 ```
 
 ## Options <a name="options"></a>
-You can configure the supabase module by using the nhost key in `nuxt.config.{ts,js}`:
+You can configure the nhost module by using the nhost key in `nuxt.config.{ts,js}`:
 
 ```
 import { defineNuxtConfig } from 'nuxt'
@@ -206,7 +206,7 @@ Then call your API route from any vue file:
     const { customers } = await $fetch('/api/customers')
   }
 ```
-Be careful, if you want to call this route on SSR, please read this [section](https://v3.nuxtjs.org/getting-started/data-fetching/#isomorphic-fetch-and-fetch), you must send your browser cookies including your supabase token.
+Be careful, if you want to call this route on SSR, please read this [section](https://v3.nuxtjs.org/getting-started/data-fetching/#isomorphic-fetch-and-fetch), you must send your browser cookies including your nhost token.
 ```
 const { data: { customers }} = await useFetch('/api/customers', {
   headers: useRequestHeaders(['cookie'])
