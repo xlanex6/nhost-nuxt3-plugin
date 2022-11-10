@@ -30,11 +30,12 @@ A simple wrapper around [nhost-js](https://docs.nhost.io/reference/javascript) t
 Checkout the [Nuxt 3 documentation](https://v3.nuxtjs.org/getting-started/installation) and [Nhost](https://docs.nhost.io/reference/javascript) to learn more.
 
 ## Installation <a name="installation"></a>
-Add @nuxtjs/nhost dev dependency to your project:
+Add @uniqueweb/nhost
+dev dependency to your project:
 
 ```
-npm install @nuxtjs/nhost --save-dev
-yarn add --dev @nuxtjs/nhost
+npm install @uniqueweb/nhost --save-dev
+yarn add --dev @uniqueweb/nhost
 ```
 
 Lastly, add NUXT_PUBLIC_NHOST_SUBDOMAIN and NUXT_PUBLIC_NHOST_REGION to the .env:

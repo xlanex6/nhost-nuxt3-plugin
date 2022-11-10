@@ -28,13 +28,13 @@
     "lint": "eslint --ext .js,.ts,.vue ."
   },
   "dependencies": {
+    "@nhost/core": "^0.9.1",
     "@nhost/nhost-js": "^1.5.2",
     "@nuxt/kit": "^3.0.0-rc.13",
     "defu": "^6.1.0",
     "graphql": "^16.6.0"
   },
   "devDependencies": {
-    "@nhost/core": "^0.9.1",
     "@nuxt/module-builder": "^0.2.0",
     "@nuxt/schema": "^3.0.0-rc.13",
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
