@@ -26,7 +26,7 @@ A simple wrapper around [nhost-js](https://docs.nhost.io/reference/javascript) t
 
 ## Introduction <a name="introduction"></a>
 
-@nuxtjs/nhost is a Nuxt module for first class integration with Nhost.<br>
+@uniqueweb/nhost is a Nuxt module for first class integration with Nhost.<br>
 Checkout the [Nuxt 3 documentation](https://v3.nuxtjs.org/getting-started/installation) and [Nhost](https://docs.nhost.io/reference/javascript) to learn more.
 
 ## Installation <a name="installation"></a>
@@ -34,8 +34,8 @@ Add @uniqueweb/nhost
 dev dependency to your project:
 
 ```
-npm install @uniqueweb/nhost --save-dev
-yarn add --dev @uniqueweb/nhost
+npm install @maximilian-schwarz/nhost --save-dev
+yarn add --dev @maximilian-schwarz/nhost
 ```
 
 Lastly, add NUXT_PUBLIC_NHOST_SUBDOMAIN and NUXT_PUBLIC_NHOST_REGION to the .env:

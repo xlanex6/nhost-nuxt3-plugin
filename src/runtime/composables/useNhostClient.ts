@@ -1,7 +1,6 @@
 import { NhostClient } from '@nhost/nhost-js'
 import { defu } from 'defu'
 import { useRuntimeConfig, useNuxtApp } from '#imports'
-import { NhostClientConstructorParams } from '@nhost/nhost-js/dist/utils/types'
 
 export const useNhostClient = () => {
   const nuxtApp = useNuxtApp()

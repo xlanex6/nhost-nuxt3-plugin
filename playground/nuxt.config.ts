@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
-import NhostModule from '..'
+import NhostModule from '../dist/module.mjs'
 
 export default defineNuxtConfig({
   modules: [

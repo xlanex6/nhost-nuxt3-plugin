@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url'
 import { defu } from 'defu'
-import { defineNuxtModule, addPlugin, addServerHandler, createResolver, resolveModule, addTemplate } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, addServerHandler, extendViteConfig, createResolver, resolveModule, addTemplate } from '@nuxt/kit'
 import { CookieOptions } from './runtime/types'
 
 export interface ModuleOptions {
@@ -48,7 +48,7 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: '@nuxtjs/nhost',
+    name: '@maximilian-schwarz/nhost',
     configKey: 'nhost'
   },
   defaults: {
@@ -64,7 +64,7 @@ export default defineNuxtModule<ModuleOptions>({
       sameSite: 'lax'
     }
   },
-  setup (options, nuxt) {
+  setup: function (options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
     const resolveRuntimeModule = (path: string) => resolveModule(path, { paths: resolve('./runtime') })
 
@@ -128,5 +128,13 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.hook('prepare:types', (options) => {
       options.references.push({ path: resolve(nuxt.options.buildDir, 'types/nhost.d.ts') })
     })
+
+    if (nuxt.options.dev) {
+      extendViteConfig((config) => {
+        config.optimizeDeps = config.optimizeDeps || {}
+        config.optimizeDeps.include = config.optimizeDeps.include || []
+        config.optimizeDeps.include.push('form-data')
+      })
+    }
   }
 })
