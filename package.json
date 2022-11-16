@@ -1,6 +1,6 @@
 {
   "name": "@maximilian-schwarz/nhost",
-  "version": "0.0.5",
+  "version": "0.0.51",
   "description": "A simple wrapper around nhost-js to enable usage and integration within Nuxt.",
   "repository": {
     "type": "git",
@@ -30,16 +30,16 @@
   "dependencies": {
     "@nhost/core": "0.9.2",
     "@nhost/nhost-js": "1.6.0",
-    "@nuxt/kit": "^3.0.0-rc.13",
+    "@nuxt/kit": "^3.0.0-rc.14",
     "defu": "6.1.1",
     "graphql": "16.6.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.2.0",
-    "@nuxt/schema": "^3.0.0-rc.13",
+    "@nuxt/schema": "^3.0.0-rc.14",
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "eslint": "^8.26.0",
-    "nuxt": "^3.0.0-rc.13"
+    "nuxt": "^3.0.0-rc.14"
   },
   "publishConfig": {
     "access": "public"

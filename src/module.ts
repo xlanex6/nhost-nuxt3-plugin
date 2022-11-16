@@ -9,28 +9,28 @@ export interface ModuleOptions {
    * @default process.env.NHOST_BACKEND_URL
    * @type string
    */
-  backendUrl: string,
+  backendUrl?: string,
 
   /**
    * Project subdomain (e.g. ieingiwnginwnfnegqwvdqwdwq) Use localhost during local development
    * @default process.env.NHOST_SUBDOMAIN
    * @type string
    */
-  subdomain: string
+  subdomain?: string
 
   /**
    * Project region (e.g. eu-central-1) Project region is not required during local development (when subdomain is localhost)
    * @default process.env.NHOST_REGION
    * @type string
    */
-  region: string
+  region?: string
 
   /**
    * When set, the admin secret is sent as a header, x-hasura-admin-secret, for all requests to GraphQL, Storage, and Serverless Functions.
    * @default process.env.NHOST_ADMIN_SECRET
    * @type string
    */
-  adminSecret: string
+  adminSecret?: string
 
   /**
    * Nhost cookie options for session handling
@@ -49,7 +49,10 @@ export interface ModuleOptions {
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: '@maximilian-schwarz/nhost',
-    configKey: 'nhost'
+    configKey: 'nhost',
+    compatibility: {
+      nuxt: '^3.0.0-rc.14'
+    }
   },
   defaults: {
     backendUrl: '' as string,
@@ -75,6 +78,7 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     // Public runtimeConfig
+    nuxt.options.runtimeConfig.public = nuxt.options.runtimeConfig.public || {}
     nuxt.options.runtimeConfig.public.nhost = defu(nuxt.options.runtimeConfig.public.nhost, {
       backendUrl: options.backendUrl,
       subdomain: options.subdomain,
