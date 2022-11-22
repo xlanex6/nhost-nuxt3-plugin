@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@nuxt-themes/docus": "0.3.1",
-    "@nuxtjs/web-vitals": "^0.1.10",
     "@vercel/analytics": "^0.1.5",
     "nuxt": "npm:nuxt3@latest"
   }
